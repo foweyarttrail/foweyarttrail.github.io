@@ -1,0 +1,4 @@
+collections:
+  stops:
+    output: true
+    permalink: /:stop/:shortname
