@@ -37,7 +37,7 @@
       {% for stop in site.stops %}
        stops.push({
              info : new google.maps.InfoWindow({
-                   content : {{stop.excerpt}}
+                   content : {% include stop %}
              }),
              marker : new google.maps.Marker({
                    position: {lat: {{stop.latitude}}, lng: {{stop.longitude}}},
