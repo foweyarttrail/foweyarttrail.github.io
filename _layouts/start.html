@@ -21,26 +21,7 @@
   <body>
     <div id="map"></div>
     {% include map.html %}
-    
-        
-        var contentString = '<h1>It is a beach</h1>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-
-        var marker = new google.maps.Marker({
-          position: readymoney,
-          icon: stopCircle,
-          label:"1",
-          map: map,
-          title: 'Readymoney (Beach)'
-        });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-      }
-    </script>
+    {% include stops.html%}
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQjwrzb1TKcqV3vpeGaHyAgk86lzwMn0o&callback=initMap">
     </script>
