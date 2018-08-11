@@ -1,34 +1,54 @@
 <script>
-      function initMap() {
-        var center = {lat: 50.329342, lng: -4.644844};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: center
-        });
-        
-       var stopCircle = {
-          path: google.maps.SymbolPath.CIRCLE,
-          fillColor: 'white',
-          fillOpacity: 0.8,
-          scale: 10,
-          strokeColor: 'red',
-          strokeWeight: 3
-        };
-        
-        
-        map.setOptions({styles: [
-          {
-            featureType: 'poi',
-            stylers: [{visibility: 'off'}]
-          },
+     function initMap() {
+       var center = {lat: 50.329342, lng: -4.644844};
+       var map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 15,
+         center: center
+       });
+
+      var stopCircle = {
+         path: google.maps.SymbolPath.CIRCLE,
+         fillColor: 'white',
+         fillOpacity: 0.8,
+         scale: 10,
+         strokeColor: 'red',
+         strokeWeight: 3
+       };
+
+
+       map.setOptions({styles: [
          {
-            featureType: 'poi.park',
-            stylers: [{visibility: 'on'}]
-          },
-          {
-            featureType: 'transit',
-            elementType: 'labels.icon',
-            stylers: [{visibility: 'off'}]
-          }
-        ]});
+           featureType: 'poi',
+           stylers: [{visibility: 'off'}]
+         },
+        {
+           featureType: 'poi.park',
+           stylers: [{visibility: 'on'}]
+         },
+         {
+           featureType: 'transit',
+           elementType: 'labels.icon',
+           stylers: [{visibility: 'off'}]
+         }
+       ]});
+      var stops = [];
+      {% for stop in site.stops %}
+            stops[{{site.stops.number}}] = {
+                  info : new google.maps.InfoWindow({
+                        content : "<h1>stuff<\/h1>"
+                  }),
+                  marker : new google.maps.Marker({
+                        position: {lat: {{stop.latitude}}, long: {{stop.longitude}}},
+                        icon: stopCircle,
+                        label: "{{stop.number}}"
+                        map: map,
+                        title: "{{stop.title}}"
+                  })
+            }
+      {% endfor %}
+      stops.forEach(stop=>{
+            stop.marker.addListener('click',()=>{
+                  stop.info.open(map,stop.marker);
+            }
+      })
 </script>
