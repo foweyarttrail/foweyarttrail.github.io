@@ -28,10 +28,12 @@
       function initMap() {
         var readymoney = {lat: 50.329342, lng: -4.644844};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
+          zoom: 15,
           center: readymoney
         });
-
+        
+        map.setOptions({styles: styles['hide']}); 
+        
         var contentString = '<h1>It is a beach</h1>';
 
         var infowindow = new google.maps.InfoWindow({
