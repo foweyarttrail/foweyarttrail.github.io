@@ -1,0 +1,34 @@
+<script>
+      function initMap() {
+        var center = {lat: 50.329342, lng: -4.644844};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: center
+        });
+        
+       var stopCircle = {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'white',
+          fillOpacity: 0.8,
+          scale: 10,
+          strokeColor: 'red',
+          strokeWeight: 3
+        };
+        
+        
+        map.setOptions({styles: [
+          {
+            featureType: 'poi',
+            stylers: [{visibility: 'off'}]
+          },
+         {
+            featureType: 'poi.park',
+            stylers: [{visibility: 'on'}]
+          },
+          {
+            featureType: 'transit',
+            elementType: 'labels.icon',
+            stylers: [{visibility: 'off'}]
+          }
+        ]});
+</script>
