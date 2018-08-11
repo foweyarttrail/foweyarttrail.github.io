@@ -32,7 +32,17 @@
           center: readymoney
         });
         
-        map.setOptions({styles: styles['hide']}); 
+        map.setOptions({styles: [
+          {
+            featureType: 'poi.business',
+            stylers: [{visibility: 'off'}]
+          },
+          {
+            featureType: 'transit',
+            elementType: 'labels.icon',
+            stylers: [{visibility: 'off'}]
+          }
+        ]}); 
         
         var contentString = '<h1>It is a beach</h1>';
 
