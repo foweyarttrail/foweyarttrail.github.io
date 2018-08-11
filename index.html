@@ -32,6 +32,16 @@
           center: readymoney
         });
         
+       var stopCircle = {
+          path: google.maps.SymbolPath.CIRCLE,,
+          fillColor: 'red',
+          fillOpacity: 0.8,
+          scale: 1,
+          strokeColor: 'red',
+          strokeWeight: 3
+        };
+        
+        
         map.setOptions({styles: [
           {
             featureType: 'poi.business',
@@ -52,6 +62,8 @@
 
         var marker = new google.maps.Marker({
           position: readymoney,
+          icon: stopCircle,
+          label:1,
           map: map,
           title: 'Readymoney (Beach)'
         });
