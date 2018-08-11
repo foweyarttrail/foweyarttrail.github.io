@@ -47,7 +47,7 @@
                   })
             })
       {% endfor %}
-      stops.forEach(stop=>{
+      stops.forEach((stop)=>{
             stop.marker.addListener('click',()=>{
                   stop.info.open(map,stop.marker);
             })
