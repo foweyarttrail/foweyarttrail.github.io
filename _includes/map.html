@@ -34,6 +34,9 @@
        ]});
           
       var stops = [];
+      var openInfos = [];
+      var closeInfos = openInfos.forEach(info=>info.close())    
+          
       {% for stop in site.stops %}
        stops.push({
              info : new google.maps.InfoWindow({
@@ -48,9 +51,11 @@
              })
        })
       {% endfor %}
-      stops.forEach((stop)=>{
+      stops.forEach(stop=>{
             stop.marker.addListener('click',()=>{
+                  closeInfos()
                   stop.info.open(map,stop.marker);
+                  openInfos.push(stop.info);
             })
       })          
           
