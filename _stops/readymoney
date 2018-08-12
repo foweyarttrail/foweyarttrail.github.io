@@ -6,6 +6,6 @@ longitude: -4.644844
 number: 1
 image: images/150x150.png
 exhibitors:
-  -name: The Sea
+  - name: The Sea
 ---
 This is just a fantastic beach
