@@ -1,7 +1,11 @@
 content : ''+
 '<div class="row">'+
-'<img src="{{stop.image}}" alt="" class="left">'+
-'<span class = "black-text right">'+
-'{{stop.content | strip_newlines}}'+
-'</span>'+
+  '<div class="col s6">'+
+    '<img src="{{stop.image}}">'+
+  '</div>'+
+  '<div class = "col s6">'+
+    '<span class = "black-text right">'+
+      '{{stop.content | strip_newlines}}'+
+    '</span>'+
+  '</div>'+
 '</div>'
