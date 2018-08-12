@@ -33,6 +33,7 @@
          }
        ]});
           
+          
       var stops = [];
       var openInfos = [];
       var closeInfos = () => {
@@ -43,7 +44,8 @@
           
       {% for stop in site.stops %}
        stops.push({
-             info : new google.maps.InfoWindow({
+             info : new InfoBox({
+                 class : "card horizontal",
                  maxWidth: 300,
                  {% include blurb.html %}
              }),
