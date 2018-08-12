@@ -4,8 +4,8 @@ title: Ready Money
 latitude: 50.329342
 longitude: -4.644844
 number: 1
-image: images/150x150.png
 exhibitors:
   - name: The Sea
+  image: images/readymoney
 ---
 This is just a fantastic beach
