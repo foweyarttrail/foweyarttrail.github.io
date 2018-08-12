@@ -1,10 +1,12 @@
-{% for stop in site.stops %}
-<ul>
-  <li>{{stop.title}}
-  {% for exhibitor in stop.exhibitors %}
-    {{exhibitor.name}}
-  {% endfor %}
-  </li>
-  
-</ul>
+<div = "col s12 m4">
+  {% for stop in site.stops %}
+    {% for exhibitor in stop.exhibitors %}
+      <div class = "card horizontal" id = "{{exhibitor.name | slugify}}>
+        <div class = "card-image">
+          <img src = "{{exhibitor.image}}">
+        </div>
+        {{exhibitor.name}}
+      </div>
+    {% endfor %}
 {% endfor %}
+</div>
