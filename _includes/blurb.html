@@ -1,6 +1,6 @@
 content:''+
 '<div class="iw-container">'+
-  '<div class="iw-title">{{stop.title}}</div>'+ 
+  '<div class="iw-title">{{stop.title | markdownify}}</div>'+ 
   '<div class = "iw-content">'+
        '<img src="{{stop.image}}"/>'+
       '{{stop.content | strip_newlines}}'+
