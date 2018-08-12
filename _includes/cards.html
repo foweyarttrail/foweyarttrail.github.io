@@ -1,4 +1,4 @@
-<div = "col s12 m4">
+<div class = "col s12 m4">
   {% for stop in site.stops %}
     {% for exhibitor in stop.exhibitors %}
       <div class = "card horizontal" id = "{{exhibitor.name | slugify}}>
