@@ -3,8 +3,8 @@
   <div class="section">
     <h5>{{stop.title}}</h5>
     {% for exhibitor in stop.exhibitors %}
-      <div id = "{{exhibitor.name | slugify}}">
-          <img src = "{{exhibitor.image}}" class = "left">
+      <div class = "row" id = "{{exhibitor.name | slugify}}">
+          <img src = "{{exhibitor.image}}" class = "left" />
             <b>{{exhibitor.name}}</b><br>
             <i>{{exhibitor.description}}</i><br>
             e: {{exhibitor.email}}
