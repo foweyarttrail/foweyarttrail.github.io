@@ -4,7 +4,7 @@
   <div class="section">
     <h5>{{stop.title}}</h5>
     {% for exhibitor in stop.exhibitors %}
-      <div class = "card horizontal" id = "{{exhibitor.name | slugify}}">
+      <div class = "card horizontal z-depth-0" id = "{{exhibitor.name | slugify}}">
         <div class = "card-image">
           <img src = "{{exhibitor.image}}">
         </div>
