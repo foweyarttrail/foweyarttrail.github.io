@@ -6,6 +6,6 @@ longitude: -4.639855
 number: 2
 image: images/150x150.png
 exhibitors:
-  -name: mum
-  -name: dad
+  - name: Mum
+  - name: Dad
 ---
