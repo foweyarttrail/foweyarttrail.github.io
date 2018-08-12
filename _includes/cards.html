@@ -3,17 +3,11 @@
   <div class="section">
     <h5>{{stop.title}}</h5>
     {% for exhibitor in stop.exhibitors %}
-      <div class = "card horizontal z-depth-0" id = "{{exhibitor.name | slugify}}">
-        <div class = "card-image">
-          <img src = "{{exhibitor.image}}">
-        </div>
-        <div class = "card-stacked">
-          <div class = "card-content" style = "padding: 5px">
+      <div id = "{{exhibitor.name | slugify}}">
+          <img src = "{{exhibitor.image}}" class = "left">
             <b>{{exhibitor.name}}</b><br>
             <i>{{exhibitor.description}}</i><br>
             e: {{exhibitor.email}}
-          </div>
-        </div>
       </div>
     {% endfor %}
   </div>
