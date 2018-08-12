@@ -33,11 +33,13 @@
          }
        ]});
           
+      var htmlFrom(){return "<h1>Hi</h1>"}
+          
       var stops = [];
       {% for stop in site.stops %}
        stops.push({
              info : new google.maps.InfoWindow({
-                   {%include blurb.html %}
+                   content: htmlFrom('{{stop.title}}')
              }),
              marker : new google.maps.Marker({
                    position: {lat: {{stop.latitude}}, lng: {{stop.longitude}}},
