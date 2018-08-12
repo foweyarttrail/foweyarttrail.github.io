@@ -9,14 +9,14 @@ hours: 11am - 4:30pm every day
 other: guide dogs only
 image: images/150x150.png
 exhibitors: 
-  name: Seafarers' Mission
+  - name: Seafarers' Mission
     type: Paintings, Mixed Media, Graphic Art & Print, Ceramics and Paper Cut Art
     description: Six local talented arists will be exhibiting together, to include; Love from Cornwall, Moorwishes and Kate Trees. Cafe available with river views
     email: email@email.com
     website: web.site.com
     telephone: 0112312312312312 or 1241413134
     image: images/150x150.png
-  name: Debbie Martin
+ - name: Debbie Martin
     type: Paper Cut Art
     description: Each piece of art is unique and hand crafted. Inspired by rolling hills.
     email: email@email.com
