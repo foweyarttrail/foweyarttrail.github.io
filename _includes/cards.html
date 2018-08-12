@@ -5,11 +5,11 @@
     <h5>{{stop.title}}</h5>
     {% for exhibitor in stop.exhibitors %}
       <div class = "card horizontal z-depth-0" id = "{{exhibitor.name | slugify}}">
-        <div class = "h6">{{exhibitor.name}}</div>
         <div class = "card-image">
           <img src = "{{exhibitor.image}}">
         </div>
         <div class = "card-stacked">
+          <div class = "card-title">{{exhibitor.name}}</div>
           <div class = "card-content">
             {{exhibitor.description}}
             {{exhibitor.email}}
