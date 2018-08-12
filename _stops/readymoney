@@ -6,6 +6,6 @@ longitude: -4.644844
 number: 1
 exhibitors:
   - name: The Sea
-    image: images/readymoney
+    image: images/readymoney.png
 ---
 This is just a fantastic beach
