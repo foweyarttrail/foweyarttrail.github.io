@@ -35,7 +35,11 @@
           
       var stops = [];
       var openInfos = [];
-      var closeInfos = openInfos.forEach(info=>info.close())    
+      var closeInfos = () => {
+          while(openInfos){
+               openInfos.pop().close()
+          }
+      }    
           
       {% for stop in site.stops %}
        stops.push({
