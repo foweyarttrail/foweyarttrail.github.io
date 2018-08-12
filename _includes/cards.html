@@ -1,5 +1,8 @@
 <div class = "col s12 m4">
   {% for stop in site.stops %}
+  <div class="divider"></div>
+  <div class="section">
+    <h5>{{stop.title}}</h5>
     {% for exhibitor in stop.exhibitors %}
       <div class = "card horizontal" id = "{{exhibitor.name | slugify}}">
         <div class = "card-image">
@@ -8,5 +11,6 @@
         {{exhibitor.name}}
       </div>
     {% endfor %}
+  </div>
 {% endfor %}
 </div>
