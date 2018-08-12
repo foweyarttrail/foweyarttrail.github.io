@@ -1,6 +1,5 @@
 <div class = "col s12 m6">
   {% for stop in site.stops %}
-  <div class="divider"></div>
   <div class="section">
     <h5>{{stop.title}}</h5>
     {% for exhibitor in stop.exhibitors %}
@@ -18,5 +17,6 @@
       </div>
     {% endfor %}
   </div>
+  <div class="divider"></div>
 {% endfor %}
 </div>
