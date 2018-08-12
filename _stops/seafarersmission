@@ -16,7 +16,7 @@ exhibitors:
     website: web.site.com
     telephone: 0112312312312312 or 1241413134
     image: images/150x150.png
- - name: Debbie Martin
+  - name: Debbie Martin
     type: Paper Cut Art
     description: Each piece of art is unique and hand crafted. Inspired by rolling hills.
     email: email@email.com
