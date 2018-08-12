@@ -47,6 +47,8 @@
       {% for stop in site.stops %}
        stops.push({
              info : new InfoBox({
+                 boxClass = "card horizontal",
+                 closeURL = "",
                  maxWidth: 300,
                  {% include blurb.html %}
              }),
