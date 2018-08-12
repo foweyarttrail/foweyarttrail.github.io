@@ -5,7 +5,7 @@
     {% for exhibitor in stop.exhibitors %}
       <div class = "row" id = "{{exhibitor.name | slugify}}">
         <div class = "col s3">
-          <img src = "{{exhibitor.image}}" class = "left image-responsive" />
+          <img src = "{{exhibitor.image}}" class = "left responsive-img" />
         </div>
         <div class = "col s9">
             <b>{{exhibitor.name}}</b><br>
