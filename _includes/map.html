@@ -36,7 +36,7 @@
       var stops = [];
       var openInfos = [];
       var closeInfos = () => {
-          while(openInfos){
+          while(openInfos[0]){
                openInfos.pop().close()
           }
       }    
