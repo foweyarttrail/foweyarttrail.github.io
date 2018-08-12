@@ -1,5 +1,5 @@
 content:'<ul>'+
 {% for exhibitor in stop.exhibitors %}
-  '<li>'+"{{exhibitor.name}}"+'</li>'+
+  '<li href = "#{{exhibitor.name |slugify}}">'+"{{exhibitor.name}}"+'</li>'+
 {% endfor %}
 '</ul>'
