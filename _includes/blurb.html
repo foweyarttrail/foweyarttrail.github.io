@@ -1,8 +1,9 @@
 content:''+
-'<div class="col s12">'+
-  '<div class="h3">'+"{{stop.title}}"+'</div>'+ 
-  '<div class = "black-text">'+
-       '{{stop.content | strip_newlines}}'+
-       '<img class = "right" src="{{stop.image}}"/>'+
+'<div class="card horizontal">'+
+  '<div class = "card-image">'+
+    '<img class = "right" src="{{stop.image}}"/>'+
   '</div>'+
+  '<div class = "card-content">'+
+    '{{stop.content | strip_newlines}}'+
+  '</div>'
 '</div>'
