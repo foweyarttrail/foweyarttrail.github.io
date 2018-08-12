@@ -8,10 +8,12 @@
         <div class = "card-image">
           <img src = "{{exhibitor.image}}">
         </div>
-        <div class = "card-content">
-          <div class = "h6">{{exhibitor.name}}</div>
-          {{exhibitor.description}}
-          {{exhibitor.email}}
+        <div class = "card-stacked">
+          <div class = "card-content">
+            <div class = "h6">{{exhibitor.name}}</div>
+            {{exhibitor.description}}
+            {{exhibitor.email}}
+          </div>
         </div>
       </div>
     {% endfor %}
