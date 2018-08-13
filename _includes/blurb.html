@@ -1,6 +1,6 @@
 content:''+
 '<div class = "h4">'+"{{stop.title}}"+'</div>'+
 {% for exhibitor in stop.exhibitors %}
-  '<a href = "#{{exhibitor.name |slugify}}">'+"{{exhibitor.name}}"+'</a><br>'+
+  '<a href = "#{{stop.number | slugify }}:{{exhibitor.name | slugify}}">'+"{{exhibitor.name}}"+'</a><br>'+
 {% endfor %}
 '</div>'
