@@ -1,7 +1,7 @@
 <div class = "col s12 m6">
   {% for stop in site.stops %}
   <div class="section">
-    <span class = "grey white-text col s12">{{stop.title}}</span>
+    <span class = "grey white-text col s12"><span class="badge red">{{stop.number}}</span>{{stop.title}}</span>
     {% for exhibitor in stop.exhibitors %}
       <div class = "row" id = "{{exhibitor.name | slugify}}">
         <div class = "col s3">
