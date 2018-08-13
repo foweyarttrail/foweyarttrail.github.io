@@ -1,9 +1,9 @@
 <div class = "col s12 m6">
   {% for stop in site.stops %}
   <div class="section">
-    <span class = "grey white-text col s12"><span class="badge red white-text">{{stop.number}}</span>{{stop.title}}</span>
+    <span id = "stop:{{stop.number}}" class = "grey white-text col s12"><span class="badge red white-text">{{stop.number}}</span>{{stop.title}}</span>
     {% for exhibitor in stop.exhibitors %}
-      <div class = "row" id = "{{stop.number}}:{{exhibitor.name | slugify}}">
+      <div class = "row" id = "exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}">
         <div class = "col s3">
           <img src = "{{exhibitor.image}}" class = "left responsive-img" />
         </div>
