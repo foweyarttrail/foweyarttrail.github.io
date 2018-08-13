@@ -10,9 +10,9 @@
         <div class = "col s9">
             <b>{{exhibitor.name}}</b><br>
             <i>{{exhibitor.description}}</i><br>
-            {%if exhibitor.email %}<i class="material-icons">email</i>{{exhibitor.email}}{% endif %}
-            {%if exhibitor.website %}<i class="material-icons">web</i><a href = "{{exhibitor.website}}">{{exhibitor.website}}</a>{% endif %}
-            {%if exhibitor.telephone %}<i class = "material-icons">local_phone</i>{{exhibitor.telephone}}{% endif %}
+            {%if exhibitor.email %}<i class="material-icons small">email</i>{{exhibitor.email}}<br>{% endif %}
+            {%if exhibitor.website %}<i class="material-icons small">web</i><a href = "{{exhibitor.website}}">{{exhibitor.website}}</a><br>{% endif %}
+            {%if exhibitor.telephone %}<i class = "material-icons small">local_phone</i>{{exhibitor.telephone}}<br>{% endif %}
         </div>
       </div>
     {% endfor %}
