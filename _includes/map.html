@@ -1,5 +1,5 @@
 <script>
-     var stops = []
+     var stops = {}
      function initMap() {
        var center = {lat: 50.335458, lng: -4.640939};
        var map = new google.maps.Map(document.getElementById('map'), {
@@ -41,7 +41,7 @@
       }    
           
       {% for stop in site.stops %}
-       stops[{{stop.number}}]={
+       stops['{{stop.number}}']={
              info : new google.maps.InfoWindow({
                  maxWidth: 300,
                  {% include blurb.html %}
