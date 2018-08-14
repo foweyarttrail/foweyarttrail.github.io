@@ -12,7 +12,7 @@
           <img src = "{{exhibitor.image}}" class = "left responsive-img" />
         </div>
         <div class = "col s9 exhibitor">
-            <div class = "name"><b>{{exhibitor.name}}</div>
+            <div class = "name">{{exhibitor.name}}</div>
             <div class = "description">{{exhibitor.description}}</i></div>
             {% if exhibitor.email %}<div class = "valign-wrapper email"><i class="material-icons tiny">email</i> {{exhibitor.email}}</div>{% endif %}
             {% if exhibitor.website %}<div class = "valign-wrapper web"><i class="material-icons tiny">web</i><a href = "{{exhibitor.website}}"> {{exhibitor.website}}</a></div>{% endif %}
