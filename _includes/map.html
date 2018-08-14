@@ -55,12 +55,14 @@
              })
        }
       {% endfor %}
-      for(stop in stops){
-            stop.marker.addListener('click',()=>{
+      for(number in stops){
+            var stop = stops[number]
+            stop.clickHandler = ()=>{
                   closeInfos()
                   stop.info.open(map,stop.marker);
                   openInfos.push(stop.info);
-            })
+            }
+            stop.marker.addListener('click',stop.clickHandler)
       }                   
    }
 </script>
