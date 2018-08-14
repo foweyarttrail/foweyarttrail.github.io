@@ -62,7 +62,8 @@
       }
       for(number in stops){
             var stop = stops[number]
-            stop.marker.addListener('click',clickHandler(stop))
+            stop.click = clickHandler(stop)
+            stop.marker.addListener('click',stop.click)
       }                   
    }
 </script>
