@@ -2,7 +2,7 @@
   {% for stop in site.stops %}
   <div class="section stop">
     <div class = "valign-wrapper red white-text">
-      <span id = "stop:{{stop.number}}" class = "col s1 center-align">{{stop.number}}</span>
+      <span id = "stop:{{stop.number}}" class = "col s1 left-align">{{stop.number}}</span>
       <span class = "grey white-text col s11">{{stop.title}}</span>
     </div>
     <span class = "white black-text col s3">{% for icon in stop.icons %}<i class="material-icons tiny">{{icon}}</i>{% endfor %}</span>
@@ -11,10 +11,10 @@
     </span>
     {% for exhibitor in stop.exhibitors %}
       <div class = "row" id = "exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}">
-        <div class = "col s3">
+        <div class = "col s4">
           <img src = "{{exhibitor.image}}" alt = "Work from {{exhibitor.name}}" class = "left responsive-img" />
         </div>
-        <div class = "col s9 exhibitor">
+        <div class = "col s8 exhibitor">
             <div class = "name">{{exhibitor.name}}</div>
             <div class = "type">{{exhibitor.type}}</div>
             <div class = "description">{{exhibitor.description}}</div>
