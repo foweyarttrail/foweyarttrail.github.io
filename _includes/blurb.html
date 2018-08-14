@@ -1,5 +1,5 @@
 content:''+
-'<a href = "#stop:{{stop.number}}"><b>'+"{{stop.title}}"+'</b></a></div>'+
+'<a href = "#stop:{{stop.number}}"><b>'+"{{stop.title}}"+'</b></a>'+
 '<div class = "divider"></div>'+
 {% for exhibitor in stop.exhibitors %}
   '<a href = "#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}">'+"{{exhibitor.name}}"+'</a><br>'+
