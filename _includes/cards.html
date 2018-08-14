@@ -1,10 +1,12 @@
 <div class = "col s12 m6" id = "scroll-nav">
   {% for stop in site.stops %}
   <div class="section stop">
-    <span id = "stop:{{stop.number}}" class = "red white-text col s1 center-align">{{stop.number}}</span>
-    <span class = "grey white-text col s11">{{stop.title}}</span>
+    <div class = "valign-wrapper">
+      <span id = "stop:{{stop.number}}" class = "red white-text col s1 center-align">{{stop.number}}</span>
+      <span class = "grey white-text col s11">{{stop.title}}</span>
+    </div>
     <span class = "white black-text col s3">{% for icon in stop.icons %}<i class="material-icons tiny">{{icon}}</i>{% endfor %}</span>
-    <span class = "white black-text col s6 offset-s3 right-align hours">
+    <span class = "white black-text col s9 right-align hours">
       {{stop.hours}} {{stop.other}}
     </span>
     {% for exhibitor in stop.exhibitors %}
