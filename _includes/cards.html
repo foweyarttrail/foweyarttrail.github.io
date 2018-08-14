@@ -2,10 +2,9 @@
   {% for stop in site.stops %}
   <div class="section stop">
     <span id = "stop:{{stop.number}}" class = "red grey-text col s1 center-align">{{stop.number}}</span>
-    <span class = "grey white-text col s11">
-      <div class = "valign-wrapper">{{stop.title}}{% for icon in stop.icons %}<i class="material-icons tiny">{{icon}}</i>{% endfor %}</div>
-    </span>
-    <span class = "white black-text col s12 right-align hours">
+    <span class = "grey white-text col s11">{{stop.title}}</span>
+    <span class = "white black-text col s1">{% for icon in stop.icons %}<i class="material-icons tiny">{{icon}}</i>{% endfor %}</span>
+    <span class = "white black-text col s11 right-align hours">
       {{stop.hours}} {{stop.other}}
     </span>
     {% for exhibitor in stop.exhibitors %}
