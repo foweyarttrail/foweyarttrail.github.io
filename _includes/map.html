@@ -1,4 +1,5 @@
 <script>
+     var stops = []
      function initMap() {
        var center = {lat: 50.335458, lng: -4.640939};
        var map = new google.maps.Map(document.getElementById('map'), {
@@ -32,8 +33,6 @@
          }
        ]});
           
-          
-      var stops = [];
       var openInfos = [];
       var closeInfos = () => {
           while(openInfos[0]){
@@ -42,12 +41,10 @@
       }    
           
       {% for stop in site.stops %}
-       stops.push({
+       stops[{{stop.number}}]={
              info : new google.maps.InfoWindow({
-                 boxClass : "card horizontal",
-                 closeBoxURL: "",
                  maxWidth: 300,
-                 {% include blurb.html %}
+                 {% include blurb.html | strip_newlines %}
              }),
              marker : new google.maps.Marker({
                    position: {lat: {{stop.latitude}}, lng: {{stop.longitude}}},
@@ -56,16 +53,15 @@
                    map: map,
                    title: "{{stop.title}}"
              })
-       })
+       }
       {% endfor %}
-      stops.forEach(stop=>{
+      for(stop in stops){
             stop.marker.addListener('click',()=>{
                   closeInfos()
                   stop.info.open(map,stop.marker);
                   openInfos.push(stop.info);
             })
-      })          
-          
+      }                   
    }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQjwrzb1TKcqV3vpeGaHyAgk86lzwMn0o&callback=initMap"></script>
