@@ -17,14 +17,13 @@
           <img src = "{{exhibitor.image}}" alt = "Work from {{exhibitor.name}}" class = "responsive-img" />
         </div>
         <div class = "col s8">
-          <div class = "name">{{exhibitor.name}}</div>
+          <div class = "name">{{exhibitor.name}}<span = "badge"><i class = "material-icons tiny">map</i>show</span></div>
           <div class = "type">{{exhibitor.type}}</div>
           <div class = "description">{{exhibitor.description}}</div>
           {% if exhibitor.email %}<div class = "valign-wrapper email"><i class="material-icons tiny">email</i> {{exhibitor.email}}</div>{% endif %}
           {% if exhibitor.website %}<div class = "valign-wrapper web"><i class="material-icons tiny">web</i><a href = "{{exhibitor.website}}"> {{exhibitor.website}}</a></div>{% endif %}
           {% if exhibitor.telephone %}<div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i> {{exhibitor.telephone}}</div>{% endif %}
         </div>
-        <div class = "col s2 offset-m6 offset-s2 btn small valign-wrapper"><i class = "material-icons tiny">map</i>Show on map</div>
       </div>
     {% endfor %}
   </div>
