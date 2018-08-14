@@ -5,6 +5,9 @@ latitude: 50.3372865
 longitude: -4.6375387
 number: Q
 hours: 10am - 5pm 17th-19th May or by appt
+icons:
+  - child_friendly
+  - accessible
 image: images/150x150.png
 exhibitors: 
   - name: Person Name
