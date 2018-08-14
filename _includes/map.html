@@ -44,7 +44,7 @@
        stops[{{stop.number}}]={
              info : new google.maps.InfoWindow({
                  maxWidth: 300,
-                 {% include blurb.html | strip_newlines %}
+                 {% include blurb.html %}
              }),
              marker : new google.maps.Marker({
                    position: {lat: {{stop.latitude}}, lng: {{stop.longitude}}},
