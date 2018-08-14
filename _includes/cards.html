@@ -1,7 +1,7 @@
 <div class = "col s12 m6" id = "scroll-nav">
   {% for stop in site.stops %}
   <div class="section stop">
-    <span id = "stop:{{stop.number}}" class = "red black-text col s1">{{stop.number}}</span>
+    <span id = "stop:{{stop.number}}" class = "red grey-text col s1 center-align">{{stop.number}}</span>
     <span class = "grey white-text col s11">
       <div class = "valign-wrapper">{{stop.title}}{% for icon in stop.icons %}<i class="material-icons tiny">{{icon}}</i>{% endfor %}</div>
     </span>
