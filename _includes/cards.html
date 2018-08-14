@@ -1,25 +1,22 @@
 <div class = "col s12 m6" id = "scroll-nav">
   {% for stop in site.stops %}
   <div class="section">
-    <span id = "stop:{{stop.number}}" class = "grey white-text col s12"><span class="badge red white-text">{{stop.number}}</span>{{stop.title}}</span>
+    <span id = "stop:{{stop.number}}" class = "grey white-text col s12">
+      <span class="badge red white-text">{{stop.number}}</span>
+      {{stop.title}}
+      {% for icon in site.stops.icons %}<i class="material-icons tiny">{{icon}}</i>{% endfor %}
+    </span>
     {% for exhibitor in stop.exhibitors %}
       <div class = "row" id = "exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}">
         <div class = "col s3">
           <img src = "{{exhibitor.image}}" class = "left responsive-img" />
         </div>
-        <div class = "col s9">
-          <div class = "row">
-            <div class = "col s6">
-              <b>{{exhibitor.name}}</b>
-            </div>
-            <div class = "col s6">
-              {{exhibitor.hours}}
-            </div>
-          </div>
-            <i>{{exhibitor.description}}</i><br>
-            {% if exhibitor.email %}<div class = "valign-wrapper"><i class="material-icons tiny">email</i> {{exhibitor.email}}</div>{% endif %}
-            {% if exhibitor.website %}<div class = "valign-wrapper"><i class="material-icons tiny">web</i><a href = "{{exhibitor.website}}"> {{exhibitor.website}}</a></div>{% endif %}
-            {% if exhibitor.telephone %}<div class = "valign-wrapper"><i class = "material-icons tiny">local_phone</i> {{exhibitor.telephone}}</div>{% endif %}
+        <div class = "col s9 exhibitor">
+            <div class = "name"><b>{{exhibitor.name}}</div>
+            <div class = "description">{{exhibitor.description}}</i></div>
+            {% if exhibitor.email %}<div class = "valign-wrapper email"><i class="material-icons tiny">email</i> {{exhibitor.email}}</div>{% endif %}
+            {% if exhibitor.website %}<div class = "valign-wrapper web"><i class="material-icons tiny">web</i><a href = "{{exhibitor.website}}"> {{exhibitor.website}}</a></div>{% endif %}
+            {% if exhibitor.telephone %}<div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i> {{exhibitor.telephone}}</div>{% endif %}
         </div>
       </div>
     {% endfor %}
