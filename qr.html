@@ -36,9 +36,10 @@
       </table>
 
 <script>
-  document.getElementsByTagName("div").forEach((div)=>{
-    if(div.id.indexOf("#")===0){
-      new QRCode(div, "https://foweyarttrail.com/"+div.id);
-    }
-  })
+      Array.prototype.slice.call(document.getElementsByTagName('div'))
+      .forEach(div=>{
+            if(div.id.indexOf("#")===0){
+                  new QRCode(div, "https://foweyarttrail.com/"+div.id);
+            }
+      })
 </script>
