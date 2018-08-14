@@ -17,8 +17,7 @@
           <img src = "{{exhibitor.image}}" alt = "Work from {{exhibitor.name}}" class = "responsive-img" />
         </div>
         <div class = "col s8">
-          <div class = "name col s6">{{exhibitor.name}}</div>
-          <a href = "#top" onclick = "stops['{{stop.number}}'].click()" class = "btn small col s4 offset-s2"><i class = "material-icons tiny">map</i>show</a>
+          <div class = "name">{{exhibitor.name}}<a href = "#top" onclick = "stops['{{stop.number}}'].click()" class = "btn small col s4 offset-s2"><i class = "material-icons tiny">map</i>show</a></div>
           <div class = "type">{{exhibitor.type}}</div>
           <div class = "description">{{exhibitor.description}}</div>
           {% if exhibitor.email %}<div class = "valign-wrapper email"><i class="material-icons tiny">email</i> {{exhibitor.email}}</div>{% endif %}
