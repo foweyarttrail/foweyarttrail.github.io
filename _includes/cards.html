@@ -2,7 +2,7 @@
   {% for stop in site.stops %}
   <div class="section stop">
     <span id = "stop:{{stop.number}}" class = "grey white-text col s12">
-      <span class="badge red white-text left-align">{{stop.number}}</span>
+      <span class="badge red white-text left">{{stop.number}}</span>
       <div class = "valign-wrapper">{{stop.title}}{% for icon in stop.icons %}<i class="material-icons tiny">{{icon}}</i>{% endfor %}</div>
     </span>
     <span class = "white black-text col s12 right-align hours">
