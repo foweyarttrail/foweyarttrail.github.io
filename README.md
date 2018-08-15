@@ -50,10 +50,8 @@ The file must start and end with `---` that's just the way life is I'm afraid
 `other` : free text - any other info - displayed after the hours in the description section
 
 `icons` : you can pick any icon you can see here : https://materializecss.com/icons.html
-
-    ### be careful to specify 1 icon per line
-    ### use a 2 space and a hypen to introduce each line:
-    
+ 
+ You must use 2 spaces then a dash '-' then a space, then the icon name
     ```
     icons:
       - ac_unit
