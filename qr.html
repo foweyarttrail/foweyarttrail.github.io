@@ -28,7 +28,7 @@
           <tr>
             <td><div id = "#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}"></div></td>
             <td>{{exhibitor.name}} at {{stop.number}}</td>
-            <td>https://foweyarttrail.com/#exhibitor:{{stop.number}}</td>
+            <td>https://foweyarttrail.com/#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}</td>
           </tr>
           {% endfor %}
           {% endfor %}
