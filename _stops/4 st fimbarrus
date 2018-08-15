@@ -5,6 +5,8 @@ latitude: 50.3336495
 longitude: -4.6392902
 number: 4
 hours: 10am - 5pm 17th-19th May or by appt
+icons:
+ -  directions_boat
 image: images/150x150.png
 exhibitors: 
   - name: Person Name
