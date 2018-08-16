@@ -1,4 +1,4 @@
 collections:
   stops:
     output: true
-    permalink: /stop/:stop.number
+    permalink: /stop/:title
