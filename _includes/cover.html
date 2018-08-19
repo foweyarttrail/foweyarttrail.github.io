@@ -1,8 +1,12 @@
-<div class = "green white-text col s9 push-s3 m6 push-m6" style = "height:100%">
-  <h1>FOWEY ART TRAIL</h1>
-</div>
+{% assign i = 0 %}
 {% for stop in site.stops %}
 {% for exhibitor in stop.exhibitors %}
-    <img class="col s3 responsive-img left" style="padding:0;border:0" src="{{exhibitor.image}}">
+    {%if i == 3 %}
+    <div class = "green white-text col s9 m6">
+      <h1>FOWEY ART TRAIL</h1>
+    </div>
+    {% endif %}
+    <img class="col s3 responsive-img" style="padding:0;border:0" src="{{exhibitor.image}}">
+    {% assign i = i | plus:1 %}
 {% endfor %}
 {% endfor %}
