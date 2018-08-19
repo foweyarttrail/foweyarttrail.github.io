@@ -1,21 +1,7 @@
-<div class="grid">
+<div class="row">
 {% for stop in site.stops %}
 {% for exhibitor in stop.exhibitors %}
-    <div class="grid-item"><img src = "{{exhibitor.image}}" class = "responsive-img"></div>
+    <div class="col s3"><img src = "{{exhibitor.image}}" class = "responsive-img"></div>
 {% endfor %}
 {% endfor %}
 </div>
-<script>
-    var elem = document.querySelector('.grid');
-    var msnry = new Masonry( elem, {
-      // options
-      itemSelector: '.grid-item',
-      columnWidth: 200
-    });
-
-    // element argument can be a selector string
-    //   for an individual element
-    var msnry = new Masonry( '.grid', {
-      // options
-    });
-</script>
