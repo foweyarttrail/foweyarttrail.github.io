@@ -1,22 +1,7 @@
-{% assign i = 0 %}
+<div class="grid">
 {% for stop in site.stops %}
 {% for exhibitor in stop.exhibitors %}
-    {%if i == 0 %}
-    <img class="col s3 responsive-img" style="padding:0;border:0" src="{{exhibitor.image}}">
-    {% endif %}
-    {%if i == 1 %}
-    <div class="col s9 m6 green white-text"><h1>Fowey Art Trail</h1></div>
-    <img class="col s3 pull-m3 responsive-img" style="padding:0;border:0" src="{{exhibitor.image}}">
-    {% endif %}
-    {%if i == 2 %}
-    <img class="col s3 responsive-img" style="padding:0;border:0" src="{{exhibitor.image}}">
-    {% endif %}
-    {%if i == 3 %}
-    <img class="col s3 responsive-img" style="padding:0;border:0" src="{{exhibitor.image}}">
-    {% endif %}
-    {%if i > 3 %}
-    <img class="col s3 responsive-img" style="padding:0;border:0" src="{{exhibitor.image}}">
-    {% endif %}
-    {% assign i = i | plus:1 %}
+    <div class="grid-item"><img src = "{{exhibitor.image}}" class = "responsive-img"></div>
 {% endfor %}
 {% endfor %}
+</div>
