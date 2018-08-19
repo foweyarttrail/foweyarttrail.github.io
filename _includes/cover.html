@@ -1,7 +1,7 @@
 <div class="row">
 {% for stop in site.stops %}
 {% for exhibitor in stop.exhibitors %}
-    <div class="col s3"><img src = "{{exhibitor.image}}" class = "responsive-img"></div>
+    <div class="col s3"><img src = "{{exhibitor.image}}" class = "responsive-img" style = "padding:0;border:0"></div>
 {% endfor %}
 {% endfor %}
 </div>
