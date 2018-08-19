@@ -3,6 +3,6 @@
 </div>
 {% for stop in site.stops %}
 {% for exhibitor in stop.exhibitors %}
-    <img class="col s3" style = "max-height:100%;width:auto" src="{{exhibitor.image}}">
+    <img class="col s3 responsive-img" style = "border:0;padding:0" src="{{exhibitor.image}}">
 {% endfor %}
 {% endfor %}
