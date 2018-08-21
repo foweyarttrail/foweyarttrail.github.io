@@ -1,7 +1,13 @@
+{% assign i = 0 %}
+
 <div class="row">
 {% for stop in site.stops %}
-{% for exhibitor in stop.exhibitors %}
+    {% for exhibitor in stop.exhibitors %}
+    {% if i == 2 %}
+    <div class = "col s6 m3 green white-text h2">FOWEY</div> 
+    {% endif %}
     <img src = "{{exhibitor.image}}" class = "col s6 m3 responsive-img" style = "padding:0;border:0">
-{% endfor %}
+    {% assign i = i | plus:1 %}
+    {% endfor %}
 {% endfor %}
 </div>
