@@ -7,6 +7,10 @@
     position:absolute;
     top:25%;
     width: 100vw;
+    opacity:.5;
+}
+#cover-title h1 h2 {
+    opacity:1;
 }
 html, body {
 	margin: 0;
