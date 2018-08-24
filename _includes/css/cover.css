@@ -11,6 +11,9 @@
     left: 50%;
     width: 50vw;
 }
+.card-title a{
+  color: white;
+ }
 @media(min-width:601px){
 	#cover-title{
 		left:75%;
