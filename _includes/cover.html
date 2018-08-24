@@ -1,6 +1,7 @@
 {% assign i = 0 %}
 
 <div class="row green lighten-2" id="cover">
+    <div class = "col s6 m3">&nbsp;</div>
 {% for stop in site.stops %}
     {% for exhibitor in stop.exhibitors %}
     <div class="col s6 m3" href="/map/#exhibitor:{{stop.number}}:{{exhibitor.name}}">
