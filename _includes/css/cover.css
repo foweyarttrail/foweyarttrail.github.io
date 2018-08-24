@@ -4,6 +4,7 @@
     padding-bottom:0;
 }
 #cover-title {
+    padding:0;
     position:absolute;
     top:25%;
     width: 100vw;
