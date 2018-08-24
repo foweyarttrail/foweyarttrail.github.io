@@ -2,6 +2,7 @@
     overflow: scroll;
     height: 100vh;
     padding-bottom:0;
+    margin-bottom:0;
 }
 #cover-title {
     padding:0;
@@ -9,6 +10,12 @@
     top: 5%;
     left: 50%;
     width: 50vw;
+}
+@media(min-width:601px){
+	#cover-title{
+		left:75%;
+		width:25vw;
+	}
 }
 html, body {
 	margin: 0;
