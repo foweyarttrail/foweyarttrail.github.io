@@ -3,18 +3,7 @@
 <div class="row green">
 {% for stop in site.stops %}
     {% for exhibitor in stop.exhibitors %}
-    {% if i == 2 %}
-    <div class = "col s6" id = "tile">
-        <div class = "white-text center-align" id = "tile-text">
-            <h4>
-                FOWEY ART TRAIL<br>
-                <a href = "/" class = "black-text">Map</a>
-            </h4>
-        </div>
-    </div> 
-    {% endif %}
-    <img src = "{{exhibitor.image}}" class = "col s6 m3 responsive-img" style = "padding:0;border:0">
-    {% assign i = i | plus:1 %}
+    <img src = "{{exhibitor.image}}" class = "col s6 m3 responsive-img">
     {% endfor %}
 {% endfor %}
 </div>
