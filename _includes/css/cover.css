@@ -9,7 +9,8 @@
     width: 100vw;
     opacity:.5;
 }
-#cover-title h1 h2 {
+#cover-title h1,
+#cover-title h2 {
     opacity:1;
 }
 html, body {
