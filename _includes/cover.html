@@ -7,10 +7,13 @@
         <div class="card">
             <div class="card-image">
                 <img src = "{{exhibitor.image}}">
-                <span class="card-title">{{exhibitor.name}}</span>
+                <span class="card-title"><a href="/#exhibitor:{{stop.number}}:{{exhibitor.name}}">{{exhibitor.name}}</a></span>
             </div>
         </div>
     </div>
     {% endfor %}
 {% endfor %}
+</div>
+<div style = "position:absolute;top:25%" class = "center grey-text shadow">
+    <h1>Fowey Art Trail</a>
 </div>
