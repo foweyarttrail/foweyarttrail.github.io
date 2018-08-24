@@ -3,17 +3,18 @@
 <div class="row green" id="cover">
 {% for stop in site.stops %}
     {% for exhibitor in stop.exhibitors %}
-    <div class="col s6 m3" href="/#exhibitor:{{stop.number}}:{{exhibitor.name}}">
+    <div class="col s6 m3" href="/map/#exhibitor:{{stop.number}}:{{exhibitor.name}}">
         <div class="card">
             <div class="card-image">
                 <img src = "{{exhibitor.image}}">
-                <span class="card-title"><a href="/#exhibitor:{{stop.number}}:{{exhibitor.name}}">{{exhibitor.name}}</a></span>
+                <span class="card-title">{{exhibitor.name}}</span>
             </div>
         </div>
     </div>
     {% endfor %}
 {% endfor %}
 </div>
-<div style = "position:absolute;top:25%" class = "center grey-text shadow">
-    <h1>Fowey Art Trail</a>
+<div id = "covertitle" class = "center grey-text shadow">
+    <h1>Fowey Art Trail</h1>
+    <h2><a href = "/map">map</a></h2>
 </div>
