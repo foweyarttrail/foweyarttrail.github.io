@@ -1,16 +1,6 @@
 #cover {
-    overflow: scroll;
-    height: 100vh;
     padding-bottom:0;
     margin-bottom:0;
-}
-#cover-title {
-    padding:0;
-    position:absolute;
-    top: 7px;
-    left: 10.5px;
-    right: 50%;
-    width: 48vw;
 }
 .card-title a{
   color: white;
