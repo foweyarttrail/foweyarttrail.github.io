@@ -7,12 +7,16 @@
 #cover-title {
     padding:0;
     position:absolute;
-    top: 0;
+    top: 7;
+    left: 7;
     right: 50%;
     width: 50vw;
 }
 .card-title a{
   color: white;
+ }
+.cover-title h4 a{
+  color: black;
  }
 @media(min-width:601px){
 	#cover-title{
