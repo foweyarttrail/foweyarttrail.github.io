@@ -15,7 +15,7 @@
 .card-title a{
   color: white;
  }
-.cover-title a{
+a {
   color: black;
  }
 @media(min-width:601px){
