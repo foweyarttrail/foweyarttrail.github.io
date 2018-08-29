@@ -60,7 +60,7 @@ The file must start and end with `---` that's just the way life is I'm afraid
      
 `exhibitors` : a list of exhibitors - be a bit careful here
 
-    ### each exhibitor is started with a `- name:` everything up to the next `- name:` or the end of the file is about that exhibitor
+### each exhibitor is started with a `- name:` everything up to the next `- name:` or the end of the file is about that exhibitor
     
     `  - name` : Their name
     
