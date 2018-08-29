@@ -1,4 +1,4 @@
-<div class = "container">
+
     <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper amber lighten-5">
@@ -9,7 +9,7 @@
           </div>
         </nav>
     </div>
-    <div class = "row teal lighten-2" id = "cover">  
+    <div class = "row teal lighten-2" id = "cover">
     {% for stop in site.stops %}
         {% for exhibitor in stop.exhibitors %}
         <div class="col s6 m3" href="/map/#exhibitor:{{stop.number}}:{{exhibitor.name}}">
@@ -23,4 +23,4 @@
         {% endfor %}
     {% endfor %}
     </div>
-</div>
+
