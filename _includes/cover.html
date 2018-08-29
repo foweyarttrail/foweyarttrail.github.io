@@ -1,25 +1,26 @@
-
-<div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper amber lighten-5">
-        <a href="#!" class="brand-logo teal-text">Fowey Art Trail</a>
-        <ul class="right">
-          <a href="/map" class = "black-text"><li class = "valign-wrapper"><i class="material-icons large">map</i>Map</li></a>
-        </ul>
-      </div>
-    </nav>
-</div>
-<div class = "row teal lighten-2" id = "cover">  
-{% for stop in site.stops %}
-    {% for exhibitor in stop.exhibitors %}
-    <div class="col s6 m3" href="/map/#exhibitor:{{stop.number}}:{{exhibitor.name}}">
-        <div class="card">
-            <div class="card-image">
-                <img src = "{{exhibitor.image}}">
-                <span class="card-title"><a href = "/map#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}">{{exhibitor.name}}</a></span>
+<div class = "container">
+    <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper amber lighten-5">
+            <a href="#!" class="brand-logo teal-text">Fowey Art Trail</a>
+            <ul class="right">
+              <a href="/map" class = "black-text"><li class = "valign-wrapper"><i class="material-icons large">map</i>Map</li></a>
+            </ul>
+          </div>
+        </nav>
+    </div>
+    <div class = "row teal lighten-2" id = "cover">  
+    {% for stop in site.stops %}
+        {% for exhibitor in stop.exhibitors %}
+        <div class="col s6 m3" href="/map/#exhibitor:{{stop.number}}:{{exhibitor.name}}">
+            <div class="card">
+                <div class="card-image">
+                    <img src = "{{exhibitor.image}}">
+                    <span class="card-title"><a href = "/map#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}">{{exhibitor.name}}</a></span>
+                </div>
             </div>
         </div>
-    </div>
+        {% endfor %}
     {% endfor %}
-{% endfor %}
+    </div>
 </div>
