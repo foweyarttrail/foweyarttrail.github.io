@@ -60,19 +60,19 @@ The file must start and end with `---` that's just the way life is I'm afraid
      
 `exhibitors` : a list of exhibitors - be a bit careful here
 
-### each exhibitor is started with a `- name:` everything up to the next `- name:` or the end of the file is about that exhibitor
+### an exhibitor is started with a `- name:` everything up to the next `- name:` or the end of the file is about that exhibitor
     
-    `  - name` : Their name
+`  - name` : Their name
     
-    `type`: The type of work they do (e.g. Oil Painting)
+`type`: The type of work they do (e.g. Oil Painting)
     
-    `description`: a description of them and their work
+`description`: a description of them and their work
     
-    `email` : Their email address
+`email` : Their email address
     
-    `telephone` : Their telephone number
+`telephone` : Their telephone number
     
-    `website` : Their website - include the https://
+`website` : Their website - include the https://
     
-    `image` : an image that you've uploaded (into the images folder)
+`image` : an image that you've uploaded (into the images folder)
 
