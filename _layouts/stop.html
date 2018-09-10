@@ -4,22 +4,22 @@
   <body id = "top">
      <div class = "row">
       <h1>{{page.title}}</h1>
-        {% for exhibitor in page.exhibitors %}
-         <div class = "row" id = "exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}">
-           <div class = "col s4">
+        <div class = "row">
+           {% for exhibitor in page.exhibitors %}
+           <div class = "col s4 m2">
              <img src = "{{exhibitor.image}}" alt = "Work from {{exhibitor.name}}" class = "responsive-img" />
            </div>
-           <div class = "col s8">
+           <div class = "col s8 m4">
              <div class = "name">{{exhibitor.name}}</div>
              <div class = "type">{{exhibitor.type}}</div>
              <div class = "description">{{exhibitor.description}}</div>
              {% if exhibitor.email %}<div class = "valign-wrapper email"><i class="material-icons tiny">email</i>  {{exhibitor.email}}</div>{% endif %}
              {% if exhibitor.website %}<div class = "valign-wrapper web"><i class="material-icons tiny">web</i>  <a href = "{{exhibitor.website}}"> {{exhibitor.website}}</a></div>{% endif %}
              {% if exhibitor.telephone %}<div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>  {{exhibitor.telephone}}</div>{% endif %}
-             <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>  <a href = "#top" onclick = "stops['{{stop.number}}'].click()">show on map</a></div>
+             <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>  <a href = "/map#stop:{{stop.number}}:{{exhibitor.name | slugify}}">show on map</a></div>
            </div>
-         </div>
-        {% endfor %}
+           {% endfor %}
+        </div>
      </div>
   </body>
 </html>
