@@ -16,7 +16,7 @@
              {% if exhibitor.email %}<div class = "valign-wrapper email"><i class="material-icons tiny">email</i>  {{exhibitor.email}}</div>{% endif %}
              {% if exhibitor.website %}<div class = "valign-wrapper web"><i class="material-icons tiny">web</i>  <a href = "{{exhibitor.website}}"> {{exhibitor.website}}</a></div>{% endif %}
              {% if exhibitor.telephone %}<div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>  {{exhibitor.telephone}}</div>{% endif %}
-             <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>  <a href = "/map#stop:{{page.number}}:{{exhibitor.name | slugify}}">show on map</a></div>
+             <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>  <a href = "/map#exhibitor:{{page.number}}:{{exhibitor.name | slugify}}">show on map</a></div>
            </div>
            {% endfor %}
         </div>
