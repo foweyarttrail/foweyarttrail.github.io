@@ -1,7 +1,7 @@
 collections:
   stops:
     output: true
-    permalink: /stop/:title
+    permalink: /stop/:title.html
 title: Fowey Art Trail
 description: Map of exhibitors for this year's Art Trail in Fowey
 url: https://foweyarttrail.com
