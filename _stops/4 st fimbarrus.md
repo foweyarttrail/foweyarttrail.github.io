@@ -13,5 +13,5 @@ exhibitors:
     description: Impressionist mountain landscapes
     email: email@address.com
     telephone: 0112312312312312
-    image: images/2.jpeg
+    image: /images/2.jpeg
 ---
