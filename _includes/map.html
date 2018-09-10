@@ -69,7 +69,7 @@
       if(/[?&]show/.test(location.search) && location.hash){
            console.log('b')
            var parts = location.hash.split(":")
-           console.log('c',parts,stops)
+           console.log('c',stops[parts[1]])
            if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
                 console.log('d')
                 stops[parts[1]].click()
