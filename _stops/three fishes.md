@@ -14,5 +14,5 @@ exhibitors:
     description: I work from my studio to produce a range ofhand built and domestic wheel thrown pottery using
     email: email@address.com
     telephone: 0112312312312312
-    image: images/8.jpeg
+    image: /images/8.jpeg
 ---
