@@ -64,13 +64,13 @@
             var stop = stops[number]
             stop.click = clickHandler(stop)
             stop.marker.addListener('click',stop.click)
-      }                   
-   }
-   if(/[?&]show/.test(location.search) && location.hash){
-     var parts = location.hash.split(":")
-     if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
-          document.addEventListener("load", stops[parts[1]].click);
-     }
+      }
+      if(/[?&]show/.test(location.search) && location.hash){
+           var parts = location.hash.split(":")
+           if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
+                stops[parts[1]].click()
+           }
+      }
    }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQjwrzb1TKcqV3vpeGaHyAgk86lzwMn0o&callback=initMap"></script>
