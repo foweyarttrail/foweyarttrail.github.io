@@ -69,7 +69,7 @@
    if(/[?&]show/.test(location.search) && location.hash){
      var parts = location.hash.split(":")
      if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
-          stops[parts[1]].click();
+          object.addEventListener("load", stops[parts[1]].click);
      }
    }
 </script>
