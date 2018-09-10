@@ -66,6 +66,12 @@
             stop.marker.addListener('click',stop.click)
       }                   
    }
+   if(/[?&]show/.test(location.search) && location.hash){
+     var parts = location.hash.split(":")
+     if(parts[1] && stops[part[1]] && stops[part[1]].click){
+          stops[part[1]].click();
+     }
+   }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQjwrzb1TKcqV3vpeGaHyAgk86lzwMn0o&callback=initMap"></script>
 <div class = "col s12 m6" id = "map-holder">
