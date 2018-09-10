@@ -11,5 +11,5 @@ exhibitors:
     description: Abstract work, large and small, in oil and goauche, often drawn from
     email: email@address.com
     telephone: 0112312312312312
-    image: images/1.jpeg
+    image: /images/1.jpeg
 ---
