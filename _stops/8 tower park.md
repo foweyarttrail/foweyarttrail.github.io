@@ -11,5 +11,5 @@ exhibitors:
     description: Colourful paintings in oil and scrylic reflecting the character and beauty of Cornwall
     email: email@address.com
     telephone: 0112312312312312
-    image: images/3.jpeg
+    image: /images/3.jpeg
 ---
