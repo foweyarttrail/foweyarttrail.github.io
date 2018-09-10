@@ -65,10 +65,15 @@
             stop.click = clickHandler(stop)
             stop.marker.addListener('click',stop.click)
       }
+       console.log('a')
       if(/[?&]show/.test(location.search) && location.hash){
+           console.log('b')
            var parts = location.hash.split(":")
+           console.log('c')
            if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
+                console.log('d')
                 stops[parts[1]].click()
+                
            }
       }
    }
