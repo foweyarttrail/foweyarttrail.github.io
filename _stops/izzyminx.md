@@ -12,11 +12,11 @@ exhibitors:
     email: email@address.com
     website: website.com
     telephone: 0112312312312312
-    image: images/4.jpeg
+    image: /images/4.jpeg
   - name: Another Name
     type: Paintings and Drawings
     description: Varied media celebrating landscapes, sea and lide. Originals, print and cards for sale
     email: email@address.com
     telephone: 0112312312312312
-    image: images/5.jpeg
+    image: /images/5.jpeg
 ---
