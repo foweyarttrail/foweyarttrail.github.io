@@ -13,12 +13,12 @@ exhibitors:
     email: email@email.com
     website: web.site.com
     telephone: 0112312312312312 or 1241413134
-    image: images/cold.png
+    image: /images/cold.png
   - name: The Moon
     type: Wave Art
     description: Tidal action and waves are exhibited here
     email: email@email.com
     website: web.site.com
     telephone: 0112312312312312 or 1241413134
-    image: images/7.jpeg
+    image: /images/7.jpeg
 ---
