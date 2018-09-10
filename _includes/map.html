@@ -66,13 +66,9 @@
             stop.marker.addListener('click',stop.click)
       }
       if(/[?&]show/.test(location.search) && location.hash){
-           console.log('b')
            var parts = location.hash.split(":")
-           console.log(stops,parts,parts[1],stops[parts[1]])
            if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
-                console.log('d')
                 stops[parts[1]].click()
-                
            }
       }
    }
