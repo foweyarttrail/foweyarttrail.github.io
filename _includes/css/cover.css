@@ -1,7 +1,7 @@
 #cover {
     padding-bottom:0;
     margin-bottom:0;
-    background:url('https://maps.googleapis.com/maps/api/staticmap?center=Fowey,UK&zoom=7,key=AIzaSyDQjwrzb1TKcqV3vpeGaHyAgk86lzwMn0o') no-repeat;
+    background:url('https://maps.googleapis.com/maps/api/staticmap?center=Fowey,UK&zoom=7&key=AIzaSyDQjwrzb1TKcqV3vpeGaHyAgk86lzwMn0o') no-repeat;
     background-size:cover
 }
 .card-title a{
