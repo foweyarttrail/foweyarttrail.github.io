@@ -5,6 +5,9 @@
 .card-title a{
   color: white;
  }
+.cover-image {
+  opacity: 0.9
+}
 @media(min-width:601px){
 	#cover-title{
 		right:75%;
