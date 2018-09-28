@@ -1,7 +1,1 @@
-content:''+
-'<a href = "#stop:{{stop.number}}"><b>'+"{{stop.title}}"+'</b></a>'+
-'<div class = "divider"></div>'+
-{% for exhibitor in stop.exhibitors %}
-  '{{exhibitor.name}}<br>'+
-{% endfor %}
-''
+content:''+'<a href = "#stop:{{stop.number}}"><b>'+"{{stop.title}}"+'</b></a>'+'<div class = "divider"></div>'+{% for exhibitor in stop.exhibitors %}'{{exhibitor.name}}<br>'+{% endfor %}''
