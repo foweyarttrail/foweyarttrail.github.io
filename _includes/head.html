@@ -9,7 +9,7 @@
 	<style>
 		/* {{page.css | default: "default"}} */
 		/* {{css_override | default : "override" }} */
-		/* {{ {{css_override | default : "override" }} | default : "ed" }}*/
+		/* {{css_override | default : page.css | default : "ed" }}*/
 	{%include css/{{page.css | default: "default"}}.css %}
 	</style>
 </head>
