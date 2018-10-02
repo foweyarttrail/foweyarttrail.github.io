@@ -12,13 +12,15 @@
     <div class = "row" id = "cover">
     {% for stop in site.stops %}
         {% for exhibitor in stop.exhibitors %}
-        <div class="col s6 m3" href="/map/#exhibitor:{{stop.number}}:{{exhibitor.name}}">
-            <div class="card">
-                <div class="card-image">
-                    <img src = "{{exhibitor.image}}" class = "cover-image" href = "/map?show#stop:{{stop.number}}">
-                    <span class="card-title"><a href = "/map?show#stop:{{stop.number}}">{{exhibitor.name}}</a></span>
+        <div class="col s6 m3">
+            <a href = "/map?show#stop:{{stop.number}}">
+                <div class="card">
+                    <div class="card-image">
+                        <img src = "{{exhibitor.image}}" class = "cover-image">
+                        <span class="card-title"><a href = "/map?show#stop:{{stop.number}}">{{exhibitor.name}}</a></span>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         {% endfor %}
     {% endfor %}
