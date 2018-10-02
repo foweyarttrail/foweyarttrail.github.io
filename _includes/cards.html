@@ -17,7 +17,7 @@
           <img src = "{{exhibitor.image}}" alt = "Work from {{exhibitor.name}}" class = "responsive-img" />
         </div>
         <div class = "col s8">
-          <a href = "/stops/{{exhibitor.name}}"><div class = "name">{{exhibitor.name}}</div></a>
+          <div class = "name">{{exhibitor.name}}</div>
           <div class = "type">{{exhibitor.type}}</div>
           <div class = "description">{{exhibitor.description}}</div>
           {% if exhibitor.email %}<div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:{{exhibitor.email}}">{{exhibitor.email}}</a></div>{% endif %}
@@ -28,6 +28,7 @@
       </div>
     {% endfor %}
   </div>
+  <a href = "/stop/{{stop.name}}">More info about {{stop.name}}</a>
   <div class="divider"></div>
 {% endfor %}
 </div>
