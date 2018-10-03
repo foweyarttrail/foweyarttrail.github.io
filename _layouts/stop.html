@@ -20,13 +20,13 @@
            </div>
            {% endfor %}
         </div>
-        {% if page.gallery %}
         <div class = "row">
            <h3>Selected works</h3>
-           {% for image in page.gallery %}
+           {% for gallery in site.galleries %}
+           {{gallery}}
+           {{stop}}
            {% endfor %}
         </div>
-        {% endif %}
      </div>
   </body>
 </html>
