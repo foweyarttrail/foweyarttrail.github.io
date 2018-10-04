@@ -4,6 +4,7 @@
   <body id = "top" class = "white">
      <div class = "container" id = "stop-content" >
       <h4>{{page.title}}</h4>
+      <h5>Exhibitors</h5>
         <div class = "row">
            {% for exhibitor in page.exhibitors %}
            <div class = "col s4 m2">
@@ -16,27 +17,31 @@
              {% if exhibitor.email %}<div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:{{exhibitor.email}}">{{exhibitor.email}}</a></div>{% endif %}
              {% if exhibitor.website %}<div class = "valign-wrapper web"><i class="material-icons tiny">web</i>&nbsp;<a href = "{{exhibitor.website}}">{{exhibitor.website}}</a></div>{% endif %}
              {% if exhibitor.telephone %}<div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;{{exhibitor.telephone}}</div>{% endif %}
-             <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['{{stop.number}}'].click()">show on map</a></div>
+             <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "/map?show#stop:{{stop.number}}">show on map</a></div>
            </div>
            {% endfor %}
         </div>
         <div class = "row">
-           <h5>Selected works</h5>
-          {% assign galleries = site.collections | where : "label","galleries" %}
-          {% assign images = galleries[0].files %}
+          <!-- this is awful -->
+          {% assign stops = site.collections | where:"label","stops" %}
+          {% assign images = stops[0].files %}
           {% assign this_stop = page.url | replace : "/stop/","" %}
-          {% for image in images %}
-            {% if image.path contains this_stop %}
-            <div class="col s6 m3">
-              <div class="card">
-                  <div class="card-image">
-                      <img src = "/galleries/{{this_stop}}/{{image.name}}" class = "cover-image">
-                      <span class="card-title">{{image.basename}}</span>
-                  </div>
+          {% assign images = images | where_exp:"image","image.path contains this_stop" %}
+          {% if images.size > 0 %}
+          <h5>Selected works</h5>
+            {% for image in images %}
+              {% if image.path contains this_stop %}
+              <div class="col s6 m3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src = "/{{image.name}}" class = "cover-image">
+                        <span class="card-title">{{image.basename}}</span>
+                    </div>
+                </div>
               </div>
-            </div>
-            {% endif %}
-          {% endfor %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         </div>
      </div>
   </body>

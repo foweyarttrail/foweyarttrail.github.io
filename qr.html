@@ -12,25 +12,32 @@
 
         <tbody>
           <tr>
-            <td><div id = "#"></div></td>
+            <td><div id = "!"></div></td>
             <td>Homepage</td>
             <td>https://foweyarttrail.com/</td>
           </tr>
           {% for stop in site.stops %}
           <tr>
-            <td><div id = "#stop:{{stop.number}}"></div></td>
+            <td><div id = "/map#stop:{{stop.number}}!"></div></td>
             <td>Stop {{stop.number}}</td>
-            <td>https://foweyarttrail.com/#stop:{{stop.number}}</td>
+            <td>https://foweyarttrail.com/map#stop:{{stop.number}}</td>
           </tr>
           {% endfor %}
           {% for stop in site.stops %}
           {% for exhibitor in stop.exhibitors %}
           <tr>
-            <td><div id = "#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}"></div></td>
+            <td><div id = "/map#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}!"></div></td>
             <td>{{exhibitor.name}} at {{stop.number}}</td>
-            <td>https://foweyarttrail.com/#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}</td>
+            <td>https://foweyarttrail.com/map#exhibitor:{{stop.number}}:{{exhibitor.name | slugify}}</td>
           </tr>
           {% endfor %}
+          {% endfor %}
+          {% for stop in site.stops %}
+          <tr>
+            <td><div id = "{{stop.url}}!"></div></td>
+            <td>{{stop.title}}</td>
+            <td>https://foweyarttrail.com{{stop.url}}</td>
+          </tr>
           {% endfor %}
         </tbody>
       </table>
@@ -38,8 +45,8 @@
 <script>
       Array.prototype.slice.call(document.getElementsByTagName('div'))
       .forEach(div=>{
-            if(div.id.indexOf("#")===0){
-                  new QRCode(div, "https://foweyarttrail.com/map"+div.id);
+            if(div.id.indexOf("!")===div.id.length-1){
+                  new QRCode(div, "https://foweyarttrail.com/"+div.id.replace("!",""));
             }
       })
 </script>
