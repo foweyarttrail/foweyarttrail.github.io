@@ -22,8 +22,13 @@
         </div>
         <div class = "row">
            <h3>Selected works</h3>
-           {{site.galleries | inspect }}
+           {{site.galleries.files | inspect }}
            {% for file in site.galleries.files %}
+           1
+            {{file.path}}
+           {% endfor %}
+          {% for file in site.galleries.docs %}
+           1
             {{file.path}}
            {% endfor %}
            {{page.path}}
