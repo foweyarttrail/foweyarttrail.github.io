@@ -23,6 +23,8 @@
         <div class = "row">
            <h3>Selected works</h3>
            {{site.galleries.files | inspect }}
+           {{site.galleries.docs | inspect }}
+           {{site.galleries.static_files | inspect }}
            {% for file in site.galleries.files %}
            1
             {{file.path}}
