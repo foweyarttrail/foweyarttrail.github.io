@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	<meta content="initial-scale=1.0, user-scalable=no" name="viewport">
+	<meta charset="utf-8">
+	<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Fowey Art Trail | Map of exhibitors for this year’s Art Trail in Fowey</title>
+<meta property="og:title" content="Fowey Art Trail" />
+<meta name="author" content="Hazel Bradish" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Map of exhibitors for this year’s Art Trail in Fowey" />
+<meta property="og:description" content="Map of exhibitors for this year’s Art Trail in Fowey" />
+<link rel="canonical" href="http://localhost:4000/map.html" />
+<meta property="og:url" content="http://localhost:4000/map.html" />
+<meta property="og:site_name" content="Fowey Art Trail" />
+<script type="application/ld+json">
+{"name":null,"description":"Map of exhibitors for this year’s Art Trail in Fowey","author":{"@type":"Person","name":"Hazel Bradish"},"@type":"WebPage","url":"http://localhost:4000/map.html","publisher":null,"image":null,"headline":"Fowey Art Trail","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+	<title>Fowey Art Trail</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	<style>
+	#map, #map-holder {
+	min-height: 100vh;
+	height: 100%;
+	padding: 0;
+}
+@media(min-width:601px) {
+	#scroll-nav {
+		overflow: scroll;
+		max-height: 100vh
+	}
+}
+.hours {
+	font-size:8pt;
+}
+.name {
+	font-weight: bold;
+}
+.type {
+	font-size:10pt;
+	padding-bottom:1pt;
+}
+.description {
+	font-style:italic;
+	font-weight:100;
+	padding-bottom:2pt;
+	color: #666666;
+}
+.email {
+	font-size:10pt;
+}
+.website {
+	font-size:10pt;
+}
+.telephone {
+	font-size:10pt;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+	</style>
+</head>
+
+  <body id = "top">
+     <div class = "row">
+      <script>
+     var stops = {}
+     function initMap() {
+       var center = {lat: 50.335458, lng: -4.640939};
+       var map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 15,
+         center: center
+       });
+
+      var stopCircle = {
+         path: google.maps.SymbolPath.CIRCLE,
+         fillColor: 'white',
+         fillOpacity: 0.8,
+         scale: 10,
+         strokeColor: 'red',
+         strokeWeight: 3
+       };
+
+
+       map.setOptions({styles: [
+         {
+           featureType: 'poi',
+           stylers: [{visibility: 'off'}]
+         },
+        {
+           featureType: 'poi.park',
+           stylers: [{visibility: 'on'}]
+         },
+         {
+           featureType: 'transit',
+           elementType: 'labels.icon',
+           stylers: [{visibility: 'off'}]
+         }
+       ]});
+          
+      var openInfos = [];
+      var closeInfos = () => {
+          while(openInfos[0]){
+               openInfos.pop().close()
+          }
+      }    
+          
+      
+       stops['17']={
+             info : new google.maps.InfoWindow({
+                 maxWidth: 300,
+                 content:'<a href = "#stop:17"><b>' + "10 Station Road" + '</b></a><div class = "divider"></div>' + "Person Name" + '<br>'
+
+             }),
+             marker : new google.maps.Marker({
+                   position: {lat: 50.3395931, lng: -4.634017},
+                   icon: stopCircle,
+                   label: "17",
+                   map: map,
+                   title: "10 Station Road"
+             })
+       }
+      
+       stops['4']={
+             info : new google.maps.InfoWindow({
+                 maxWidth: 300,
+                 content:'<a href = "#stop:4"><b>' + "4 St. Fimbarrus Rd, PL23 1JJ" + '</b></a><div class = "divider"></div>' + "Person Name" + '<br>'
+
+             }),
+             marker : new google.maps.Marker({
+                   position: {lat: 50.3336495, lng: -4.6392902},
+                   icon: stopCircle,
+                   label: "4",
+                   map: map,
+                   title: "4 St. Fimbarrus Rd, PL23 1JJ"
+             })
+       }
+      
+       stops['2']={
+             info : new google.maps.InfoWindow({
+                 maxWidth: 300,
+                 content:'<a href = "#stop:2"><b>' + "8 Tower Park, PL23 1JB" + '</b></a><div class = "divider"></div>' + "Person Name" + '<br>'
+
+             }),
+             marker : new google.maps.Marker({
+                   position: {lat: 50.3310285, lng: -4.6428017},
+                   icon: stopCircle,
+                   label: "2",
+                   map: map,
+                   title: "8 Tower Park, PL23 1JB"
+             })
+       }
+      
+       stops['5']={
+             info : new google.maps.InfoWindow({
+                 maxWidth: 300,
+                 content:'<a href = "#stop:5"><b>' + "Izzyminx, Harbour House, 26 Esplanade, PL23 1HY" + '</b></a><div class = "divider"></div>' + "Person Name" + '<br>' + "Another Name" + '<br>'
+
+             }),
+             marker : new google.maps.Marker({
+                   position: {lat: 50.3343914, lng: -4.636661},
+                   icon: stopCircle,
+                   label: "5",
+                   map: map,
+                   title: "Izzyminx, Harbour House, 26 Esplanade, PL23 1HY"
+             })
+       }
+      
+       stops['K']={
+             info : new google.maps.InfoWindow({
+                 maxWidth: 300,
+                 content:'<a href = "#stop:K"><b>' + "Seafarers' Mission" + '</b></a><div class = "divider"></div>' + "Seafarers' Mission" + '<br>' + "The Moon" + '<br>'
+
+             }),
+             marker : new google.maps.Marker({
+                   position: {lat: 50.340664, lng: -4.633859},
+                   icon: stopCircle,
+                   label: "K",
+                   map: map,
+                   title: "Seafarers' Mission"
+             })
+       }
+      
+       stops['19']={
+             info : new google.maps.InfoWindow({
+                 maxWidth: 300,
+                 content:'<a href = "#stop:19"><b>' + "The potting shed and No.7 Tavern Barn" + '</b></a><div class = "divider"></div>' + "Person Name" + '<br>'
+
+             }),
+             marker : new google.maps.Marker({
+                   position: {lat: 50.3395593, lng: -4.6413052},
+                   icon: stopCircle,
+                   label: "19",
+                   map: map,
+                   title: "The potting shed and No.7 Tavern Barn"
+             })
+       }
+      
+       stops['Q']={
+             info : new google.maps.InfoWindow({
+                 maxWidth: 300,
+                 content:'<a href = "#stop:Q"><b>' + "Three fishes pottery" + '</b></a><div class = "divider"></div>' + "Person Name" + '<br>'
+
+             }),
+             marker : new google.maps.Marker({
+                   position: {lat: 50.3372865, lng: -4.6375387},
+                   icon: stopCircle,
+                   label: "Q",
+                   map: map,
+                   title: "Three fishes pottery"
+             })
+       }
+      
+      var clickHandler = stop => ()=>{
+           closeInfos()
+           stop.info.open(map,stop.marker);
+           openInfos.push(stop.info);
+      }
+      for(number in stops){
+            var stop = stops[number]
+            stop.click = clickHandler(stop)
+            stop.marker.addListener('click',stop.click)
+      }
+      if(/[?&]show/.test(location.search) && location.hash){
+           var parts = location.hash.split(":")
+           if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
+                stops[parts[1]].click()
+           }
+      }
+   }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQjwrzb1TKcqV3vpeGaHyAgk86lzwMn0o&callback=initMap"></script>
+<div class = "col s12 m6" id = "map-holder">
+     <div id = "map"></div>
+</div>
+
+
+      <div class = "col s12 m6" id = "scroll-nav">
+  
+  <div class="section" id = "stop:17">
+    <div class = "valign-wrapper red white-text">
+      <span class = "col s2 left-align">17</span>
+      <span class = "grey white-text col s10">10 Station Road</span>
+    </div>
+    <div class = "valign-wrapper">
+      <span class = "white black-text col s3"></span>
+      <span class = "white black-text col s9 right-align hours">
+        10am - 5pm 17th-19th May or by appt 
+      </span>
+    </div>
+    
+      <div class = "row" id = "exhibitor:17:person-name">
+        <div class = "col s4">
+          <img src = "/images/1.jpeg" alt = "Work from Person Name" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">Person Name</div>
+          <div class = "type">Painting</div>
+          <div class = "description">Abstract work, large and small, in oil and goauche, often drawn from</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@address.com">email@address.com</a></div>
+          
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;5112406316234</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['17'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <a href = "/stop/10-station-road">More info</a>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section" id = "stop:4">
+    <div class = "valign-wrapper red white-text">
+      <span class = "col s2 left-align">4</span>
+      <span class = "grey white-text col s10">4 St. Fimbarrus Rd, PL23 1JJ</span>
+    </div>
+    <div class = "valign-wrapper">
+      <span class = "white black-text col s3"><i class="material-icons tiny">directions_boat</i></span>
+      <span class = "white black-text col s9 right-align hours">
+        10am - 5pm 17th-19th May or by appt 
+      </span>
+    </div>
+    
+      <div class = "row" id = "exhibitor:4:person-name">
+        <div class = "col s4">
+          <img src = "/images/2.jpeg" alt = "Work from Person Name" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">Person Name</div>
+          <div class = "type">Oil Painting</div>
+          <div class = "description">Impressionist mountain landscapes</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@address.com">email@address.com</a></div>
+          
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;5112406316234</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['4'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <a href = "/stop/4-st-fimbarrus">More info</a>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section" id = "stop:2">
+    <div class = "valign-wrapper red white-text">
+      <span class = "col s2 left-align">2</span>
+      <span class = "grey white-text col s10">8 Tower Park, PL23 1JB</span>
+    </div>
+    <div class = "valign-wrapper">
+      <span class = "white black-text col s3"></span>
+      <span class = "white black-text col s9 right-align hours">
+        10.30am - 4pm every day 
+      </span>
+    </div>
+    
+      <div class = "row" id = "exhibitor:2:person-name">
+        <div class = "col s4">
+          <img src = "/images/3.jpeg" alt = "Work from Person Name" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">Person Name</div>
+          <div class = "type">Paintings in Oil and Acyrlic</div>
+          <div class = "description">Colourful paintings in oil and scrylic reflecting the character and beauty of Cornwall</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@address.com">email@address.com</a></div>
+          
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;5112406316234</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['2'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <a href = "/stop/8-tower-park">More info</a>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section" id = "stop:5">
+    <div class = "valign-wrapper red white-text">
+      <span class = "col s2 left-align">5</span>
+      <span class = "grey white-text col s10">Izzyminx, Harbour House, 26 Esplanade, PL23 1HY</span>
+    </div>
+    <div class = "valign-wrapper">
+      <span class = "white black-text col s3"></span>
+      <span class = "white black-text col s9 right-align hours">
+        10am - 5pm everyday 
+      </span>
+    </div>
+    
+      <div class = "row" id = "exhibitor:5:person-name">
+        <div class = "col s4">
+          <img src = "/images/4.jpeg" alt = "Work from Person Name" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">Person Name</div>
+          <div class = "type">Paintings</div>
+          <div class = "description">Bright and bold acrylic paintings influenced by the quirky boats, seagulls and landmarks of fabulous Fowey</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@address.com">email@address.com</a></div>
+          <div class = "valign-wrapper web"><i class="material-icons tiny">web</i>&nbsp;<a href = "website.com">website.com</a></div>
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;5112406316234</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['5'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <div class = "row" id = "exhibitor:5:another-name">
+        <div class = "col s4">
+          <img src = "/images/5.jpeg" alt = "Work from Another Name" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">Another Name</div>
+          <div class = "type">Paintings and Drawings</div>
+          <div class = "description">Varied media celebrating landscapes, sea and lide. Originals, print and cards for sale</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@address.com">email@address.com</a></div>
+          
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;5112406316234</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['5'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <a href = "/stop/izzyminx">More info</a>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section" id = "stop:K">
+    <div class = "valign-wrapper red white-text">
+      <span class = "col s2 left-align">K</span>
+      <span class = "grey white-text col s10">Seafarers' Mission</span>
+    </div>
+    <div class = "valign-wrapper">
+      <span class = "white black-text col s3"></span>
+      <span class = "white black-text col s9 right-align hours">
+        11am - 4:30pm every day guide dogs only
+      </span>
+    </div>
+    
+      <div class = "row" id = "exhibitor:K:seafarers-mission">
+        <div class = "col s4">
+          <img src = "/images/cold.png" alt = "Work from Seafarers' Mission" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">Seafarers' Mission</div>
+          <div class = "type">Unrelenting cold</div>
+          <div class = "description">A study into adverse weather conditions and their effect on the human constitution</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@email.com">email@email.com</a></div>
+          <div class = "valign-wrapper web"><i class="material-icons tiny">web</i>&nbsp;<a href = "web.site.com">web.site.com</a></div>
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;0112312312312312 or 1241413134</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['K'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <div class = "row" id = "exhibitor:K:the-moon">
+        <div class = "col s4">
+          <img src = "/images/7.jpeg" alt = "Work from The Moon" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">The Moon</div>
+          <div class = "type">Wave Art</div>
+          <div class = "description">Tidal action and waves are exhibited here</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@email.com">email@email.com</a></div>
+          <div class = "valign-wrapper web"><i class="material-icons tiny">web</i>&nbsp;<a href = "web.site.com">web.site.com</a></div>
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;0112312312312312 or 1241413134</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['K'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <a href = "/stop/seafarersmission">More info</a>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section" id = "stop:19">
+    <div class = "valign-wrapper red white-text">
+      <span class = "col s2 left-align">19</span>
+      <span class = "grey white-text col s10">The potting shed and No.7 Tavern Barn</span>
+    </div>
+    <div class = "valign-wrapper">
+      <span class = "white black-text col s3"></span>
+      <span class = "white black-text col s9 right-align hours">
+        10am - 5pm 17th-19th May or by appt 
+      </span>
+    </div>
+    
+      <div class = "row" id = "exhibitor:19:person-name">
+        <div class = "col s4">
+          <img src = "/images/a.jpeg" alt = "Work from Person Name" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">Person Name</div>
+          <div class = "type">Pottery</div>
+          <div class = "description">I work from my studio to produce a range ofhand built and domestic wheel thrown pottery using</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@address.com">email@address.com</a></div>
+          
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;5112406316234</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['19'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <a href = "/stop/the-potting-shed">More info</a>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section" id = "stop:Q">
+    <div class = "valign-wrapper red white-text">
+      <span class = "col s2 left-align">Q</span>
+      <span class = "grey white-text col s10">Three fishes pottery</span>
+    </div>
+    <div class = "valign-wrapper">
+      <span class = "white black-text col s3"><i class="material-icons tiny">child_friendly</i><i class="material-icons tiny">accessible</i></span>
+      <span class = "white black-text col s9 right-align hours">
+        10am - 5pm 17th-19th May or by appt 
+      </span>
+    </div>
+    
+      <div class = "row" id = "exhibitor:Q:person-name">
+        <div class = "col s4">
+          <img src = "/images/8.jpeg" alt = "Work from Person Name" class = "responsive-img" />
+        </div>
+        <div class = "col s8">
+          <div class = "name">Person Name</div>
+          <div class = "type">Pottery</div>
+          <div class = "description">I work from my studio to produce a range ofhand built and domestic wheel thrown pottery using</div>
+          <div class = "valign-wrapper email"><i class="material-icons tiny">email</i>&nbsp;<a href = "mailto:email@address.com">email@address.com</a></div>
+          
+          <div class = "valign-wrapper telephone"><i class = "material-icons tiny">local_phone</i>&nbsp;5112406316234</div>
+          <div class = "valign-wrapper"><i class = "material-icons tiny">map</i>&nbsp;<a href = "#top" onclick = "stops['Q'].click()">show on map</a></div>
+        </div>
+      </div>
+    
+      <a href = "/stop/three-fishes">More info</a>
+  </div>
+  <div class="divider"></div>
+
+</div>
+
+     </div>
+  </body>
+</html>
