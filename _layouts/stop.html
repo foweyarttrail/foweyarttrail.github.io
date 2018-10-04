@@ -22,6 +22,9 @@
         </div>
         <div class = "row">
            <h3>Selected works</h3>
+           {{% for document in site.galleries.docs %}}
+            document.relative_path
+           {{% endfor %}}
            {{page.name}}
         </div>
      </div>
