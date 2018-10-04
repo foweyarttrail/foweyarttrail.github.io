@@ -22,9 +22,8 @@
         </div>
         <div class = "row">
            <h3>Selected works</h3>
-           {% for gallery in site.galleries %}
-           {{gallery}}
-           {{stop}}
+           {% for image in site.galleries %}
+           {{image.path}}
            {% endfor %}
         </div>
      </div>
