@@ -70,6 +70,8 @@
            if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
                 stops[parts[1]].click()
            }
+      } else {
+          M.toast({html: '<div class = "show-on-small">I am a toast!</div>', classes: 'rounded'});
       }
    }
 </script>
