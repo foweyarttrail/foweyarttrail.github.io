@@ -70,7 +70,7 @@
            if(parts[1] && stops[parts[1]] && stops[parts[1]].click){
                 stops[parts[1]].click()
            }
-      } else {
+      } else if (!location.hash || location.hash === "top"){
           M.toast({html: '<div class = "show-on-small">Scroll down for exhibitor info</div>'});
       }
    }
