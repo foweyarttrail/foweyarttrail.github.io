@@ -1,4 +1,5 @@
 <script>
+     var toasted = false;
      var stops = {}
      function initMap() {
        var center = {lat: 50.335458, lng: -4.640939};
@@ -71,8 +72,13 @@
                 stops[parts[1]].click()
            }
       } else if (!location.hash || location.hash === "#top"){
-          M.toast({html: '<div class = "show-on-medium-and-down">Scroll down for exhibitor info</div>'});
+          toast();
       }
+   }
+       
+   function toast(){
+     if(!toasted) M.toast({html: '<div class = "show-on-medium-and-down">Scroll down for exhibitor info</div>'});
+     toasted = true;
    }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQjwrzb1TKcqV3vpeGaHyAgk86lzwMn0o&callback=initMap"></script>
