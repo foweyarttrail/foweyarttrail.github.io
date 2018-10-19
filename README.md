@@ -80,3 +80,7 @@ The file must start and end with `---` that's just the way life is I'm afraid
 
 _stops/izzyminx : contains all the pictures for the izzyminx gallery
 
+Each image will be given the title of the file so:
+
+THIS is an IMAGE.jpg will result in an image in the gallery called "THIS is an IMAGE"
+
