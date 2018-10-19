@@ -4,7 +4,7 @@ title: 6 St. Fimbarrus Rd, PL23 1JJ
 latitude: 50.3333186
 longitude: -4.6426742
 number: 4
-hours: 10am -1117,18,19 May
+hours: 10am -11 17,18,19 May
 icons:
  -  airport_shuttle
 exhibitors: 
