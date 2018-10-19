@@ -10,7 +10,7 @@ icons:
 exhibitors: 
   - name: PersonCathy Oreilly
     type: watercolour oil and gouache
-    description:nudes and seascapes
+    description: nudes and seascapes
     email: email@address.com
     telephone: 0112312312312312
     image: images/cathyimage.jpg
