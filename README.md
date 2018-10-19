@@ -76,7 +76,7 @@ The file must start and end with `---` that's just the way life is I'm afraid
     
 `image` : an image that you've uploaded (into the images folder)
 
-### if you want to have a gallery then create another folder in the _stops folder
+### if you want to have a gallery on the "info" page for the stop then create another folder in the _stops folder
 
 _stops/izzyminx : contains all the pictures for the izzyminx gallery
 
