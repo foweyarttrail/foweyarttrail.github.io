@@ -8,7 +8,7 @@ hours: 10am -1117,18,19 May
 icons:
  -  airport_shuttle
 exhibitors: 
-  - name: Cathy Oreilly
+  - name: Cathy O'reilly
     type: Watercolour oil and gouache
     description: Nudes and seascapes
     email: email@address.com
