@@ -1,6 +1,6 @@
 ---
 layout: stop
-title:6 St. Fimbarrus Rd, PL23 1JJ
+title: 6 St. Fimbarrus Rd, PL23 1JJ
 latitude: 50.3336495
 longitude: -4.6392902
 number: 4
