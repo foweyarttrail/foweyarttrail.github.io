@@ -23,8 +23,8 @@
         </div>
         <div class = "row">
           <!-- this is awful -->
-          {% assign stops = site.collections | where:"label","stops" %}
-          {% assign images = stops[0].files %}
+          {% assign stops = site.collections | where:"label","stops" | first %}
+          {% assign images = stops.files %}
           {% assign this_stop = page.url | replace : "/stop/","" %}
           {% assign images = images | where_exp:"image","image.path contains this_stop" %}
           {% if images.size > 0 %}
