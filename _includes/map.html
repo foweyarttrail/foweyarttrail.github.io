@@ -78,7 +78,7 @@
        
    function toast(){
      console.log(window.screen.width)
-     if(!toasted && window.screen.width < 600) M.toast({html: '<div class = "show-on-small">Scroll down for exhibitor info</div>'});
+     if(!toasted && window.screen.width <= 600) M.toast({html: '<div class = "show-on-small">Scroll down for exhibitor info</div>'});
      toasted = true;
    }
 </script>
